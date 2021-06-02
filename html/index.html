@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Proyecto Fase 1</title>  
+
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/index.js"></script>
+</head>
+<body id="body" onload="main()">
+    <div id="divgeneral" style='height:735px'>
+        <div id="divmenu">
+             &nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnAbrir">Arbrir Archivo</button>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="file" id="file" hidden = "hidden" />
+            <button id="btnAnalizar" >Analizar Archivo</button>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnReporteError" style='width:60px; height:40px; text-align: center;'>Reporte Error</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnCopiasAnalizar" style='width:60px; height:40px; text-align: center;'>Analizar Copias</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" id="file2" hidden = "hidden" />
+            <button id="btnAbrir2" style='width:62px; height:40px; text-align: center;'>Abrir Archivo2</button>
+        </div>
+        <div id="div1" style=' height:575px;'>
+            <textarea id="txtTraduccion" cols="10" rows="10"></textarea> 
+            <div id="divArbol" style='background-color:gray;width:500px; height:270px; margin-top: 8px; overflow-y: scroll;resize: none;' >
+              <ul class="pd-tree" id = "padre">
+                <li><span class="pd-tree-item">Raiz</span>
+                  <ul class="pd-tree-child" id="ulAgregar">
+                    
+                  </ul>
+                </li>  
+              </ul>
+            </div>         
+        </div>
+        <div id="div2" style=' height:575px;' >
+            <textarea id="txtCampo"  cols="10" rows="10"  style='height:567px;'></textarea>
+        </div>
+
+    </div> 
+    <!-- <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.backtotop.js"></script>
+    <script src="../js/jquery.mobilemenu.js"></script>
+    <script src="../js/pidie-0.0.5.js"></script> -->
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+#btnAbrir{
+    margin-top: 8px;
+    text-align: center; 
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff;
+}
+#btnAnalizar{
+    text-align: center; 
+    width: 60px;
+    height: 40px;
+    background-color:#ffffff;
+}
+#btnReporteError{
+    text-align: center; 
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff;
+}
+#btnCopiasAnalizar{
+    text-align: center; 
+    width: 60px;
+    height: 40px;
+    background-color:#ffffff;
+}
+#body{
+    background-color: gray;
+}
+
+#txtCampo{
+    width: 530px;
+    overflow-y: scroll;
+    height: 300px;
+    resize: none;
+}
+#txtTraduccion{
+    width: 500px;
+    overflow-y: scroll;
+    height: 280px;
+    resize: none;
+}
+
+
+div#divgeneral{
+    margin: auto;
+    margin-top: 0px;
+    width: 1100px;
+    height: 900px;
+    background-color:  greenyellow;
+}
+div#divmenu{
+    width: 1100px;
+    height: 60px;
+    background-color:rgb(2, 2, 2);
+}
+div#div1{
+    margin-top: 10px;
+    float:right;
+    width: 510px;
+    height: 540px;
+   
+ 
+}
+div#div2{
+    margin-top: 10px;
+    width: 540px;
+    height: 310px;
+    
+}
+
+div#div3{
+    margin-top: 10px;
+    width: 540px;
+    height: 250px;
+
+}
+
+#tablaValores{
+  
+    text-align: left;
+
+    width: 100%;
+    display:block;
+}
+
+tr:nth-child(even){
+    background: #ddd;
+}
+td{
+    text-align: left;
+    width: 170px;
+}
+#th1,#th2,#th3{
+    text-align: left;
+    width: 170px;
+    background-color: cadetblue;
+}
+#theadValor {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
+#cuerpoTabla {
+    height: 200px;
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+}
