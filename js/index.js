@@ -51,10 +51,27 @@ function main() {
                 fr.readAsText(this.files[0]);
             }
         } else {
-            console.log("Seleccione un texto de area antes de arbrir un archivo");
+            alert("Error!, Seleccione un texto de area antes de arbrir un archivo");
         }
     }
 
 
+    function btnEjecutar() {
+        let inputTexts = document.getElementById("txtXML").value
+        let textsByLine = inputTexts.split("\n");
+        const listMarkup = makeUL(textsByLine);
+        document.getElementById("output").appendChild(listMarkup);
+      }
+      function makeUL(array) {
+          let list = document.createElement('ol');
+          for (let i = 0; i < array.length; i++) {
+              let item = document.createElement('li');
+              item.appendChild(document.createTextNode(array[i]));
+              list.appendChild(item);
+          }
+          return list;
+      }
+
+      
 
 }

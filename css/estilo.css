@@ -72,5 +72,17 @@ div#div2{
 div#div3{
     margin-top: 10px;
     width: 1250px;
-    height: 250px;
+    height: 250px
+    ;
 }
+
+ol {
+    counter-reset: list;
+  }
+  ol > li {
+    list-style: none;
+  }
+  ol > li:before {
+    content: counter(list) ") ";
+    counter-increment: list;
+  }
