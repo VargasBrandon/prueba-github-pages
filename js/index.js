@@ -1,42 +1,60 @@
-function main(){
+function main() {
 
-    var btnAbrirr = document.getElementById("btnAbrir");
-    var btnAnalizarr = document.getElementById("btnAnalizar");
-    var btnReporteErrorr = document.getElementById("btnReporteError");
-    var btnCopiasAnalizarr = document.getElementById("btnCopiasAnalizar");
-    var btnAbrirr2 = document.getElementById("btnAbrir2");
+    var btnAbrir = document.getElementById("btnAbrir");
+    var btnGuardar = document.getElementById("btnGuardar");
+    var btnReporte = document.getElementById("btnReporte");
+    var btnEjecutar = document.getElementById("btnEjecutar");
+    var SeleccionXPATH = document.getElementById("txtXPATH");
+    var SeleccionXML = document.getElementById("txtXML");
+    var file = document.getElementById("file");
 
-
-    btnAnalizarr.onclick = function(e){
-        // textoArchivo = "";
-        // textoArchivo = document.getElementById("txtCampo").value;
-        // document.getElementById('ulAgregar').innerHTML = '';
-        // AnalizarTexto(textoArchivo);
-    }
-    
-    btnAbrirr.onclick = function(e){     
-        // LimpiarTodo();
-        // AbrirArchivo();
-    }
-    btnReporteErrorr.onclick = function(e){  
-        // textoErrores = "";
-        // LlamarError("s");
-        // alert("!Reporte de Error Generado!");
+    btnAbrir.onclick = function (e) {
+        AbrirArchivo();
     }
 
-    btnCopiasAnalizarr.onclick = function(e){  
-        // LimpiarTabla1();
-        // LimpiarTabla2();
-        // LimpiarTabla3();
-        // textoArchivoCopia = "";
-        // textoArchivoCopia = document.getElementById("txtTraduccion").value;
-        // //AgregarClases("s");
-        // AnalizarTextoCopia(textoArchivoCopia);
+    btnGuardar.onclick = function (e) {
+        console.log("Guardar");
+        console.log(idArea)
     }
 
-    btnAbrirr2.onclick = function(e){  
-        //AbrirArchivo2();
+    btnReporte.onclick = function (e) {
+        console.log("Reporte");
     }
+
+    btnEjecutar.onclick = function (e) {
+        console.log("Ejecutar");
+    }
+
+    var idArea = "";
+    SeleccionXML.onclick = function (e) {
+        idArea = "txtXML"
+    }
+
+    SeleccionXPATH.onclick = function (e) {
+        idArea = "txtXPATH"
+    }
+
+    function AbrirArchivo() {
+        if (idArea != "") {
+            file.click();
+            file.onchange = function () {
+                var fr = new FileReader();
+                fr.onload = function () {
+                    if (idArea == "txtXML") {
+                        txtXML.textContent = "";
+                        txtXML.textContent = this.result;
+                    } else if (idArea == "txtXPATH") {
+                        txtXPATH.textContent = "";
+                        txtXPATH.textContent = this.result;
+                    }
+                }
+                fr.readAsText(this.files[0]);
+            }
+        } else {
+            console.log("Seleccione un texto de area antes de arbrir un archivo");
+        }
+    }
+
 
 
 }
